@@ -42,3 +42,8 @@ Route::group(['prefix' => 'admin'], function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::resource('contacts', 'Admin\ContactsAPIController');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('settings', 'Admin\SettingsAPIController');
+});

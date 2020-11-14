@@ -11,11 +11,10 @@
 <head>
 
     <meta charset="utf-8">
-    @foreach ($menus as $menu)
+    @foreach ($tags as $menu)
     <meta name="description" content="{{ $menu->meta_keyword }}">
     <title>{{ $menu->meta_title }}</title>
-
-@endforeach
+    @endforeach
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 
@@ -44,7 +43,11 @@
     <link rel="stylesheet" href="css/main.css">
 
 
+    @foreach ($settings as $setting)
+   {!! $setting->google !!}
+   {!! $setting->facebook !!}
 
+    @endforeach
 </head>
 
 <body>

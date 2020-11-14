@@ -48,3 +48,8 @@ Route::group(['prefix' => 'admin'], function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::resource('contacts', 'Admin\ContactsController', ["as" => 'admin']);
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('settings', 'Admin\SettingsController', ["as" => 'admin']);
+});
