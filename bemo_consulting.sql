@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 13, 2020 at 05:32 PM
+-- Generation Time: Nov 14, 2020 at 01:33 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.3.1
 
@@ -149,8 +149,8 @@ CREATE TABLE IF NOT EXISTS `menus` (
 --
 
 INSERT INTO `menus` (`id`, `parent_id`, `type`, `title`, `content`, `picture`, `meta_title`, `meta_keyword`, `description`, `link`, `orderid`, `status`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 1, 'Main', NULL, NULL, 'FREE Ultimate Guide to CDA Interviews: Tips & Proven Strategies to Help You Prepare & Ace Your CDA Structured Interview', 'FREE Ultimate Guide to CDA Interviews: Tips & Proven Strategies to Help You Prepare & Ace Your CDA Structured Interview', NULL, 'main', NULL, 1, NULL, NULL, '2020-11-13 07:34:37', '2020-11-13 09:11:37', NULL),
-(2, 1, 1, 'Contact Us', NULL, NULL, NULL, NULL, NULL, 'contact-us', NULL, NULL, NULL, NULL, '2020-11-13 07:35:07', '2020-11-13 09:11:48', NULL);
+(1, 1, 1, 'Main', NULL, NULL, 'FREE Ultimate Guide to CDA Interviews: Tips & Proven Strategies to Help You Prepare & Ace Your CDA Structured Interview', 'FREE Ultimate Guide to CDA Interviews: Tips & Proven Strategies to Help You Prepare & Ace Your CDA Structured Interview', NULL, 'main', 1, 1, NULL, NULL, '2020-11-13 07:34:37', '2020-11-13 09:11:37', NULL),
+(2, 1, 1, 'Contact Us', NULL, NULL, NULL, NULL, NULL, 'contact-us', 2, NULL, NULL, NULL, '2020-11-13 07:35:07', '2020-11-13 09:11:48', NULL);
 
 -- --------------------------------------------------------
 
@@ -188,6 +188,35 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
   `created_at` timestamp NULL DEFAULT NULL,
   KEY `password_resets_email_index` (`email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `settings`
+--
+
+DROP TABLE IF EXISTS `settings`;
+CREATE TABLE IF NOT EXISTS `settings` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `facebook` text COLLATE utf8mb4_unicode_ci,
+  `google` text COLLATE utf8mb4_unicode_ci,
+  `ads` text COLLATE utf8mb4_unicode_ci,
+  `disclaimer` text COLLATE utf8mb4_unicode_ci,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`id`, `title`, `facebook`, `google`, `ads`, `disclaimer`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, NULL, '<script>(function() {\r\n  var _fbq = window._fbq || (window._fbq = []);\r\n  if (!_fbq.loaded) {\r\n    var fbds = document.createElement(\'script\');\r\n    fbds.async = true;\r\n    fbds.src = \'//connect.facebook.net/en_US/fbds.js\';\r\n    var s = document.getElementsByTagName(\'script\')[0];\r\n    s.parentNode.insertBefore(fbds, s);\r\n    _fbq.loaded = true;\r\n  }\r\n  _fbq.push([\'addPixelId\', \'235586069975455\']);\r\n})();\r\nwindow._fbq = window._fbq || [];\r\nwindow._fbq.push([\'track\', \'PixelInitialized\', {}]);\r\n</script>\r\n<noscript><img height=\"1\" width=\"1\" alt=\"\" style=\"display:none\" src=\"https://www.facebook.com/tr?id=235586069975455&ev=NoScript\" /></noscript><!-- End Google Analytics -->', '<!-- Start Google Analytics -->\r\n<script>\r\n  (function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){\r\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n  })(window,document,\'script\',\'//www.google-analytics.com/analytics.js\',\'ga\');\r\n\r\n  ga(\'create\', \'UA-56991678-1\', \'auto\');\r\n  ga(\'send\', \'pageview\');\r\n\r\n</script>', NULL, NULL, NULL, NULL, '2020-11-13 17:56:51', '2020-11-13 17:56:51', NULL);
 
 -- --------------------------------------------------------
 
