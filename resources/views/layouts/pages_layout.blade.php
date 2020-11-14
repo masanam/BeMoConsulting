@@ -1,52 +1,30 @@
 <!doctype html>
-
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-
 <head>
-
     <meta charset="utf-8">
     @foreach ($tags as $menu)
     <meta name="description" content="{{ $menu->meta_keyword }}">
     <title>{{ $menu->meta_title }}</title>
     @endforeach
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
-
     <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
-
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
-    <link rel="stylesheet" href="css/flexslider.css">
-
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-
-    <link rel="stylesheet" href="css/responsive.css">
-
-    <link rel="stylesheet" href="css/animate.min.css">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/main.css">
-
-
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     @foreach ($settings as $setting)
    {!! $setting->google !!}
    {!! $setting->facebook !!}
-
     @endforeach
 </head>
 

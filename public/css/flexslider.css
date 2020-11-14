@@ -77,18 +77,15 @@ html[xmlns] .flexslider .slides {
 .flexslider {
   position: relative;
   zoom: 1;
-  height:400px;
 }
 .flexslider .slides {
   zoom: 1;
 }
 .flexslider .slides img {
-  min-height: 400px;
-  overflow:hidden;
+  height: auto;
 }
-
 .flex-viewport {
-  max-height: 1000px;
+  max-height: 2000px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
@@ -96,9 +93,11 @@ html[xmlns] .flexslider .slides {
   transition: all 1s ease;
 }
 .loading .flex-viewport {
-  max-height: 100px;
+  max-height: 300px;
 }
-
+.carousel li {
+  margin-right: 5px;
+}
 .flex-direction-nav {
   *height: 0;
 }
@@ -107,7 +106,7 @@ html[xmlns] .flexslider .slides {
   display: block;
   width: 40px;
   height: 40px;
-  margin: 20px 0 0;
+  margin: -20px 0 0;
   position: absolute;
   top: 50%;
   z-index: 10;
@@ -187,7 +186,7 @@ html[xmlns] .flexslider .slides {
 .flex-control-nav {
   width: 50%;
   position: absolute;
-  bottom: 15px;
+  bottom: 100px;
   right: 0;
   text-align: center;
   z-index: 100;
